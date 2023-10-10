@@ -11,5 +11,14 @@ function controleDeRotas(url){
                 $("#enviar").click(enviaCadastroNotebook);
             });
             break;
-    }
+         case "/cadastro/usuario":
+                   $.get(url, function(data){
+                       //Renderizar Tela
+                       $('#mainContainer').html(data);
+                       //Definir as ações dos componentes
+                       $("#enviar").click(cadastrarUsuario);
+                   });
+                   break;
+
+            }
 }

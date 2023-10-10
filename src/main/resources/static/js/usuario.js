@@ -8,7 +8,7 @@ function cadastrarUsuario(){
 
     $.ajax({
         type: "POST",
-        url: "/cadastro",
+        url: "/cadastro/usuario",
         data: {
             nome: nome,
             matricula: matricula,

@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class C_CadUsuario {
 
-    @GetMapping("/cadastro")
+    @GetMapping("/cadastro/usuario")
     public String getCadastro(){
         return "cadastros/usuario";
     }
 
-    @PostMapping("/cadastro")
+    @PostMapping("/cadastro/usuario")
     @ResponseBody
     public String cadastrarUsuario(@RequestParam("nome") String nome,
                                    @RequestParam("email") String email,
