@@ -10,11 +10,10 @@ function enviaCadastroNotebook(){
             patrimonio : patrimonio
         },
         success: function(data){
-            alertaSucesso("O Notebook foi cadastrado com sucesso");
+            alert(data);
         },
         error: function(){
-           alertaErro("Deu Ruim!");
-          // nao ta fungando
+            alert("Deu Ruim!");
         }
     });
 }
