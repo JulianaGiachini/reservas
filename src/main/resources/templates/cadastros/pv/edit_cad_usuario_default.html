@@ -1,42 +1,39 @@
+<h1 class="mt-5 mb-3">Edição de Perfil</h1>
+
 <div class="row">
-    <div class="col-5">
+
+    <div class="col-6 mb-3">
         <div class="input-group has-validation">
             <span class="input-group-text"><i class="fa-solid fa-signature"></i></span>
             <div class="form-floating">
-                <input type="text" class="form-control" id="nome" placeholder="Nome" required>
+                <input type="text" class="form-control" id="nome" th:value="${usuario.nome}"  placeholder="Nome" required>
                 <label for="nome">Nome</label>
-            </div>
-            <div class="invalid-feedback">
-                Por favor informe o nome.
             </div>
         </div>
     </div>
-    <div class="col-7">
+
+
+    <div class="col-6 mb-3">
         <div class="input-group has-validation">
             <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
             <div class="form-floating">
-                <input type="text" class="form-control" id="email" placeholder="Email" required>
-                <label for="email">Email</label>
-            </div>
-            <div class="invalid-feedback">
-                Por favor informe o Email.
+                <input type="text"  class="form-control" id="email" th:value = "${usuario.email}" placeholder="e-Mail"
+                       required>
+                <label for="email">e-Mail</label>
             </div>
         </div>
-
     </div>
-    <div class="col-4">
+
+    <div class="col-4 mb-3">
         <div class="input-group has-validation">
             <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
             <div class="form-floating">
                 <input type="password" class="form-control" id="senhaAtual" placeholder="Senha Atual" required>
                 <label for="senhaAtual">Senha Atual</label>
             </div>
-            <div class="invalid-feedback">
-                Por favor informe a Senha.
-            </div>
         </div>
     </div>
-    <div class="col-4">
+    <div class="col-4 mb-3">
         <div class="input-group has-validation">
             <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
             <div class="form-floating">
@@ -48,7 +45,7 @@
             </div>
         </div>
     </div>
-    <div class="col-4">
+    <div class="col-4 mb-3">
         <div class="input-group has-validation">
             <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
             <div class="form-floating">
@@ -60,4 +57,8 @@
             </div>
         </div>
     </div>
+    <div class="col-3 mb-3">
+        <button id="salvar" class="btn btn-lg btn-primary">Salvar</button>
+    </div>
+
 </div>
